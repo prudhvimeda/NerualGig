@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the NeuralGig platform architecture spanning AI-native matching, workflow orchestration, and compliance controls."
+    />
+    <title>NeuralGig • Platform Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <a class="brand" href="index.html">Neural<span>Gig</span></a>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="platform.html" class="active">Platform</a>
+          <a href="clients.html">For clients</a>
+          <a href="talent.html">For talent</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html">Resources</a>
+          <a class="cta" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Inside the NeuralGig graph</p>
+          <h1>AI-native infrastructure for orchestrating hybrid teams.</h1>
+          <p>
+            NeuralGig unifies talent intelligence, workflow automation, and payment rails so you
+            can spin up ready-to-ship freelancer pods with enterprise-grade guardrails.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="index.html#workspace">Test the console</a>
+            <a class="button ghost" href="../docs/PRD.md" target="_blank" rel="noopener"
+              >Read the PRD</a
+            >
+          </div>
+        </div>
+        <div class="card architecture-card">
+          <h2>Core subsystems</h2>
+          <ul class="stacked-list">
+            <li>
+              <strong>Knowledge graph</strong>
+              <span>Continuously indexed skills, proficiency, tooling, and delivery data.</span>
+            </li>
+            <li>
+              <strong>Realtime availability fabric</strong>
+              <span>Calendar sync and workload telemetry to surface actionable capacity.</span>
+            </li>
+            <li>
+              <strong>AI orchestration layer</strong>
+              <span>Personalized copilots, onboarding maps, and milestone nudges.</span>
+            </li>
+            <li>
+              <strong>Trust &amp; safety controls</strong>
+              <span>Automated compliance, NDAs, and auditable payment release.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>How the platform assembles teams</h2>
+          <p>
+            Matching blends deterministic constraints with generative insights so you always see the
+            strongest mix of individuals and pre-vetted pods.
+          </p>
+        </header>
+        <div class="timeline">
+          <div>
+            <span class="badge">1</span>
+            <h3>Project signals</h3>
+            <p>
+              Intake captures goals, skills, compliance requirements, and tooling expectations, then
+              enriches the brief with knowledge graph context.
+            </p>
+          </div>
+          <div>
+            <span class="badge">2</span>
+            <h3>Candidate generation</h3>
+            <p>
+              The matching engine composes shortlists by balancing fit score, collaboration history,
+              and real-time load balancing.
+            </p>
+          </div>
+          <div>
+            <span class="badge">3</span>
+            <h3>AI copilots activate</h3>
+            <p>
+              Neural copilots craft onboarding plans, surface runbooks, and recommend tool access to
+              compress time to value.
+            </p>
+          </div>
+          <div>
+            <span class="badge">4</span>
+            <h3>Delivery telemetry</h3>
+            <p>
+              Milestone tracking, quality signals, and automated nudges keep every pod moving toward
+              delivery with audit-ready transparency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section muted">
+      <div class="container feature-grid">
+        <article class="feature card">
+          <h3>Composable APIs</h3>
+          <p>
+            Integrate NeuralGig via REST or event webhooks to sync your CRM, project management, and
+            HRIS systems.
+          </p>
+        </article>
+        <article class="feature card">
+          <h3>Enterprise policy engine</h3>
+          <p>
+            Centralize contracting, onboarding, and compliance workflows with configurable policy
+            packs per geography.
+          </p>
+        </article>
+        <article class="feature card">
+          <h3>Observability at every layer</h3>
+          <p>
+            Real-time dashboards track capacity, spend, and milestone health while surfacing AI
+            explanations for every match decision.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
+        <div class="footer-links">
+          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
+          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
+          <a href="index.html#workspace">Prototype console</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="alert-template">
+      <div class="alert">
+        <span class="message"></span>
+        <button type="button" class="close" aria-label="Close">&times;</button>
+      </div>
+    </template>
+
+    <div id="alerts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

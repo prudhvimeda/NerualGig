@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Connect with the NeuralGig team to launch pilots, join the freelancer roster, or partner on AI enablement."
+    />
+    <title>NeuralGig • Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <a class="brand" href="index.html">Neural<span>Gig</span></a>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="platform.html">Platform</a>
+          <a href="clients.html">For clients</a>
+          <a href="talent.html">For talent</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html">Resources</a>
+          <a class="cta active" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero accent">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Let’s collaborate</p>
+          <h1>Share your goals and we’ll craft a launch plan.</h1>
+          <p>
+            Tell us about your next initiative or the skills you’d like to bring to the network.
+            We’ll follow up within one business day.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Direct lines</h2>
+          <ul class="stacked-list">
+            <li>
+              <strong>Sales</strong>
+              <span><a href="mailto:launch@neuralgig.ai" class="inline-link">launch@neuralgig.ai</a></span>
+            </li>
+            <li>
+              <strong>Talent success</strong>
+              <span><a href="mailto:guilds@neuralgig.ai" class="inline-link">guilds@neuralgig.ai</a></span>
+            </li>
+            <li>
+              <strong>Support</strong>
+              <span><a href="mailto:support@neuralgig.ai" class="inline-link">support@neuralgig.ai</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container split contact">
+        <form class="card contact-form" action="https://example.com" method="post">
+          <h2>Tell us about your needs</h2>
+          <label>Name<input name="name" required /></label>
+          <label>Email<input name="email" type="email" required /></label>
+          <label>Organization<input name="organization" /></label>
+          <label class="select">How can we help?
+            <select name="intent" required>
+              <option value="pilot">Launch a client pilot</option>
+              <option value="talent">Join the freelancer roster</option>
+              <option value="partnership">Partnership opportunity</option>
+              <option value="support">Platform support</option>
+            </select>
+          </label>
+          <label>Project details<textarea name="details" placeholder="Share goals, timelines, or skills needed."></textarea></label>
+          <button type="submit">Submit</button>
+          <p class="muted small-print">We’ll send a confirmation email with next steps.</p>
+        </form>
+        <div>
+          <h2>What happens next?</h2>
+          <ul class="stacked-list">
+            <li>
+              <strong>Discovery call</strong>
+              <span>We align on objectives, scope, and success metrics.</span>
+            </li>
+            <li>
+              <strong>Curated proposal</strong>
+              <span>Receive pod recommendations, timelines, and pricing.</span>
+            </li>
+            <li>
+              <strong>Launch readiness</strong>
+              <span>AI copilots prep onboarding, tools, and milestone plans.</span>
+            </li>
+          </ul>
+          <div class="cta-banner">
+            <h3>Prefer self-serve?</h3>
+            <p>Spin up a sandbox project directly in the prototype console.</p>
+            <a class="button ghost" href="index.html#workspace">Open console</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
+        <div class="footer-links">
+          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
+          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
+          <a href="index.html#workspace">Prototype console</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="alert-template">
+      <div class="alert">
+        <span class="message"></span>
+        <button type="button" class="close" aria-label="Close">&times;</button>
+      </div>
+    </template>
+
+    <div id="alerts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

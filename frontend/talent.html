@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="See how NeuralGig empowers freelancers with AI copilots, tooling, and transparent milestone payments."
+    />
+    <title>NeuralGig • Built for Talent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <a class="brand" href="index.html">Neural<span>Gig</span></a>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="platform.html">Platform</a>
+          <a href="clients.html">For clients</a>
+          <a href="talent.html" class="active">For talent</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html">Resources</a>
+          <a class="cta" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Grow on your terms</p>
+          <h1>Your AI copilots for every engagement.</h1>
+          <p>
+            NeuralGig equips freelancers with adaptive runbooks, personalized learning plans, and
+            transparent payment workflows so you can focus on delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="index.html#workspace">Join the roster</a>
+            <a class="button ghost" href="resources.html">Browse resources</a>
+          </div>
+        </div>
+        <div class="card">
+          <h2>What you unlock</h2>
+          <ul class="pill-list">
+            <li>AI skill coach for new tooling</li>
+            <li>Instant onboarding playbooks</li>
+            <li>Automated milestone updates</li>
+            <li>Predictable payouts with escrow</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>A tailored experience from day zero</h2>
+          <p>Freelancers receive targeted support before, during, and after every project.</p>
+        </header>
+        <div class="highlight-grid">
+          <article class="card">
+            <h3>Personalized onboarding</h3>
+            <p>
+              AI copilots map project context, stakeholders, codebases, and checklists so you can
+              start contributing immediately.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Integrated tooling</h3>
+            <p>
+              Provision the IDE, analytics stack, and documentation tools you prefer—synced across
+              every engagement.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Learning loops</h3>
+            <p>
+              Automatic skill insights recommend certifications and micro-learnings that keep you on
+              the cutting edge.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Transparent compensation</h3>
+            <p>
+              Milestone dashboards show approvals, release windows, and payout receipts in real time.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section muted">
+      <div class="container split">
+        <div>
+          <h2>Community built for collaboration</h2>
+          <p>
+            Join curated guilds organized by craft, share best practices, and collaborate with pods
+            that trust each other’s craft.
+          </p>
+          <ul class="checklist">
+            <li>Invite-only guild channels moderated by NeuralGig mentors.</li>
+            <li>Playbooks for remote rituals, retrospectives, and async delivery.</li>
+            <li>Spotlight programs that showcase your achievements to new clients.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Guild calendar</h3>
+          <ul class="stacked-list">
+            <li>
+              <strong>Weekly standups</strong>
+              <span>Async sync with your pod to plan deliverables and unblock dependencies.</span>
+            </li>
+            <li>
+              <strong>Office hours</strong>
+              <span>Meet with AI enablement coaches for tooling walkthroughs.</span>
+            </li>
+            <li>
+              <strong>Demo day</strong>
+              <span>Showcase deliverables to the client community and expand your reach.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
+        <div class="footer-links">
+          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
+          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
+          <a href="index.html#workspace">Prototype console</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="alert-template">
+      <div class="alert">
+        <span class="message"></span>
+        <button type="button" class="close" aria-label="Close">&times;</button>
+      </div>
+    </template>
+
+    <div id="alerts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
