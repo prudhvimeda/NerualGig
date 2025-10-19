@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse NeuralGig resources, including AI playbooks, integration guides, and community programming."
+    />
+    <title>NeuralGig • Resources</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <a class="brand" href="index.html">Neural<span>Gig</span></a>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="platform.html">Platform</a>
+          <a href="clients.html">For clients</a>
+          <a href="talent.html">For talent</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html" class="active">Resources</a>
+          <a class="cta" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Build with confidence</p>
+          <h1>Guides, templates, and events to power every engagement.</h1>
+          <p>
+            Tap into AI playbooks, integration walkthroughs, and community programming curated for
+            both clients and freelancers.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="../README.md" target="_blank" rel="noopener"
+              >Developer docs</a
+            >
+            <a class="button ghost" href="../docs/PRD.md" target="_blank" rel="noopener"
+              >Product brief</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <h2>Quick links</h2>
+          <ul class="stacked-list">
+            <li>
+              <strong>API reference</strong>
+              <span>Endpoints for matching, onboarding, and milestone management.</span>
+            </li>
+            <li>
+              <strong>Prototype console</strong>
+              <span>Explore the FastAPI demo flows from your browser.</span>
+            </li>
+            <li>
+              <strong>Community calendar</strong>
+              <span>Attend workshops, office hours, and showcase events.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container resource-grid">
+        <article class="card resource">
+          <h3>AI playbooks</h3>
+          <p>Ready-to-run copilots for onboarding, status updates, and retrospectives.</p>
+          <a class="inline-link" href="index.html#workspace">Launch prototype</a>
+        </article>
+        <article class="card resource">
+          <h3>Integration kits</h3>
+          <p>Connect NeuralGig with Notion, Linear, Slack, and custom internal tools.</p>
+          <a class="inline-link" href="../README.md" target="_blank" rel="noopener"
+            >View developer docs</a
+          >
+        </article>
+        <article class="card resource">
+          <h3>Policy templates</h3>
+          <p>Download compliance-ready NDAs, SOWs, and onboarding checklists.</p>
+          <a class="inline-link" href="../docs/PRD.md" target="_blank" rel="noopener"
+            >Read the PRD</a
+          >
+        </article>
+        <article class="card resource">
+          <h3>Community hub</h3>
+          <p>Join guild channels, attend live demos, and discover spotlight opportunities.</p>
+          <a class="inline-link" href="contact.html">Request access</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section muted">
+      <div class="container split">
+        <div>
+          <h2>Stay in the loop</h2>
+          <p>Subscribe to release notes and upcoming enablement sessions.</p>
+          <form class="inline" action="https://example.com" method="post">
+            <label>Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="muted small-print">We’ll send one digest per month and you can unsubscribe anytime.</p>
+        </div>
+        <div class="card">
+          <h3>Featured sessions</h3>
+          <ul class="stacked-list">
+            <li>
+              <strong>AI onboarding masterclass</strong>
+              <span>Best practices for launching pods with shared context.</span>
+            </li>
+            <li>
+              <strong>Payments deep dive</strong>
+              <span>How escrow and compliance workflows keep everyone protected.</span>
+            </li>
+            <li>
+              <strong>Guild showcase</strong>
+              <span>Live demos from top-performing freelancer pods.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
+        <div class="footer-links">
+          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
+          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
+          <a href="index.html#workspace">Prototype console</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="alert-template">
+      <div class="alert">
+        <span class="message"></span>
+        <button type="button" class="close" aria-label="Close">&times;</button>
+      </div>
+    </template>
+
+    <div id="alerts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

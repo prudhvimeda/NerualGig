@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Compare NeuralGig pricing for clients and freelancers." />
+    <title>NeuralGig • Pricing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <a class="brand" href="index.html">Neural<span>Gig</span></a>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="platform.html">Platform</a>
+          <a href="clients.html">For clients</a>
+          <a href="talent.html">For talent</a>
+          <a href="pricing.html" class="active">Pricing</a>
+          <a href="resources.html">Resources</a>
+          <a class="cta" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero accent">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Aligned incentives</p>
+          <h1>Simple, transparent pricing for every partner.</h1>
+          <p>
+            Clients pay a platform fee based on milestone volume, while freelancers unlock AI
+            copilots and growth programs for free.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Request a proposal</a>
+            <a class="button ghost" href="../docs/PRD.md" target="_blank" rel="noopener"
+              >See product scope</a
+            >
+          </div>
+        </div>
+        <div class="card pricing-card">
+          <h2>Value snapshot</h2>
+          <ul class="pill-list">
+            <li>No-cost onboarding for freelancers</li>
+            <li>Performance-based client fee tiers</li>
+            <li>Payments released within 24 hours</li>
+            <li>Dedicated success partner above $250k ARR</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Client platform fees</h2>
+          <p>Choose the tier that matches your annual freelance investment.</p>
+        </header>
+        <div class="pricing-table">
+          <article class="card">
+            <h3>Launch</h3>
+            <p class="price">3% of milestone volume</p>
+            <ul class="feature-list">
+              <li>Up to $100k annual spend</li>
+              <li>Access to AI matching and onboarding</li>
+              <li>Escrow-backed payment workflows</li>
+              <li>Email support</li>
+            </ul>
+            <a class="button ghost" href="contact.html">Start pilot</a>
+          </article>
+          <article class="card highlighted">
+            <h3>Scale</h3>
+            <p class="price">2.25% of milestone volume</p>
+            <ul class="feature-list">
+              <li>$100k–$500k annual spend</li>
+              <li>Dedicated success partner</li>
+              <li>Custom policy packs</li>
+              <li>Analytics workspace</li>
+            </ul>
+            <a class="button primary" href="contact.html">Book workshop</a>
+          </article>
+          <article class="card">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <ul class="feature-list">
+              <li>Above $500k annual spend</li>
+              <li>Private talent clouds</li>
+              <li>Marketplace revenue share options</li>
+              <li>Premium compliance and integrations</li>
+            </ul>
+            <a class="button ghost" href="contact.html">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section muted">
+      <div class="container split">
+        <div>
+          <h2>Freelancer benefits</h2>
+          <p>Unlock NeuralGig tools for free and only pay standard payment processing fees.</p>
+          <ul class="checklist">
+            <li>AI copilots and personalized learning modules.</li>
+            <li>Automated invoicing with milestone approvals.</li>
+            <li>Community events, showcases, and mentoring.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Included tools</h3>
+          <ul class="stacked-list">
+            <li>
+              <strong>Copilot Studio</strong>
+              <span>Generate onboarding plans, briefs, and async updates.</span>
+            </li>
+            <li>
+              <strong>Workflow Hub</strong>
+              <span>Track tasks, rituals, and knowledge bases in one place.</span>
+            </li>
+            <li>
+              <strong>Signal Vault</strong>
+              <span>Share case studies and proof points with prospective clients.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
+        <div class="footer-links">
+          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
+          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
+          <a href="index.html#workspace">Prototype console</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="alert-template">
+      <div class="alert">
+        <span class="message"></span>
+        <button type="button" class="close" aria-label="Close">&times;</button>
+      </div>
+    </template>
+
+    <div id="alerts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

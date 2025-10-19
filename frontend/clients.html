@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn how NeuralGig helps product and operations leaders launch projects with curated AI-supported freelancer teams."
+    />
+    <title>NeuralGig • Solutions for Clients</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <a class="brand" href="index.html">Neural<span>Gig</span></a>
+        <nav class="top-nav">
+          <a href="index.html">Home</a>
+          <a href="platform.html">Platform</a>
+          <a href="clients.html" class="active">For clients</a>
+          <a href="talent.html">For talent</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="resources.html">Resources</a>
+          <a class="cta" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero accent">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">Deliver outcomes faster</p>
+          <h1>Launch new initiatives with talent pods built for velocity.</h1>
+          <p>
+            NeuralGig assembles specialists that plug directly into your roadmap, while AI copilots
+            orchestrate onboarding, compliance, and delivery rituals.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="index.html#workspace">See matching in action</a>
+            <a class="button ghost" href="contact.html">Talk with us</a>
+          </div>
+        </div>
+        <div class="card stats-card">
+          <h2>Why product and ops leaders choose NeuralGig</h2>
+          <ul class="pill-list">
+            <li>Elastic pods ready in under 48 hours</li>
+            <li>Contextual onboarding in minutes</li>
+            <li>Milestone escrow with automated approvals</li>
+            <li>Unified reporting across every program</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container split">
+        <div>
+          <h2>Strategic pods for every stage of delivery</h2>
+          <p>
+            From discovery sprints to GTM execution, NeuralGig curates pods that combine cross-domain
+            expertise with proven collaboration history.
+          </p>
+          <ul class="checklist">
+            <li>Product discovery researchers paired with AI insight analysts.</li>
+            <li>Platform engineers and solution architects that already ship together.</li>
+            <li>Fractional PMs, designers, and marketers aligned to your rituals.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pod blueprints</h3>
+          <dl class="blueprints">
+            <div>
+              <dt>Launch squad</dt>
+              <dd>Product lead, full-stack dev, marketing strategist.</dd>
+            </div>
+            <div>
+              <dt>Scale core</dt>
+              <dd>Platform engineer, data scientist, QA automation.</dd>
+            </div>
+            <div>
+              <dt>Adoption cell</dt>
+              <dd>Customer success, enablement specialist, AI trainer.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section muted">
+      <div class="container">
+        <header class="section-header">
+          <h2>Governance built into every engagement</h2>
+          <p>Reduce risk with policy-aware workflows that meet your compliance standards.</p>
+        </header>
+        <div class="feature-grid">
+          <article class="feature card">
+            <h3>Automated intake</h3>
+            <p>
+              Customizable briefs capture security, privacy, and regional constraints before work
+              begins.
+            </p>
+          </article>
+          <article class="feature card">
+            <h3>Policy enforcement</h3>
+            <p>
+              NDAs, IP assignments, and data handling rules are embedded into every milestone.
+            </p>
+          </article>
+          <article class="feature card">
+            <h3>360° visibility</h3>
+            <p>
+              Dashboards surface capacity, spend, and status updates with AI explanations you can
+              share with stakeholders.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
+        <div class="footer-links">
+          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
+          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
+          <a href="index.html#workspace">Prototype console</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="alert-template">
+      <div class="alert">
+        <span class="message"></span>
+        <button type="button" class="close" aria-label="Close">&times;</button>
+      </div>
+    </template>
+
+    <div id="alerts" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
