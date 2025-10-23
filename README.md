@@ -32,13 +32,28 @@ uvicorn neuralgig.prototype:app --reload
 
 Once running, explore the interactive docs at http://127.0.0.1:8000/docs to try project creation, matching, onboarding plans, and payment milestone management end-to-end.
 
-4. Launch the prototype frontend (optional but recommended):
+4. Launch the Next.js application (new)
 
 ```bash
-python -m http.server 4173 -d frontend
+cd web
+npm install
+npm run dev
 ```
 
-Navigate to http://127.0.0.1:4173 in your browser. Use the top navigation to explore the Home, Platform, Client, Talent, Pricing, Resources, and Contact pages. Point the console on the Home page at the running FastAPI backend to orchestrate onboarding, matching, AI learning plans, and milestone approvals without leaving the UI.
+The app runs at http://localhost:3000 and integrates Google / GitHub OAuth via NextAuth, the FastAPI backend, and Ollama-powered learning plans. Copy `web/.env.example` to `web/.env.local` and fill in the missing secrets (Google client secret, GitHub credentials, NextAuth secret, etc.).
+
+> The legacy static marketing site remains available under `frontend/` if you still want to serve it with `python -m http.server 4173 -d frontend`.
+
+## AI learning copilot
+
+NeuralGig now integrates with a local [Ollama](https://ollama.com/) instance to generate bespoke learning summaries for freelancers. Install Ollama, pull a lightweight open-source model, and keep the service running:
+
+```bash
+ollama pull phi3
+ollama serve
+```
+
+You can override the defaults with `OLLAMA_MODEL` and `OLLAMA_BASE_URL` environment variables.
 
 ## Where to See the Output
 
@@ -79,4 +94,3 @@ Navigate to http://127.0.0.1:4173 in your browser. Use the top navigation to exp
 ## Development
 - Keep new modules covered by unit tests.
 - Extend the matching engine to support more sophisticated ranking and personalization as needed.
-

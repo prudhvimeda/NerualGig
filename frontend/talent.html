@@ -2,154 +2,664 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta
       name="description"
-      content="See how NeuralGig empowers freelancers with AI copilots, tooling, and transparent milestone payments."
+      content="NeuralGig for Talent - Join elite freelancer networks, access premium projects, and accelerate your career with AI-powered opportunities."
     />
-    <title>NeuralGig • Built for Talent</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>For Talent • NeuralGig 2030</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
   </head>
   <body>
-    <header class="top-bar">
-      <div class="container">
-        <a class="brand" href="index.html">Neural<span>Gig</span></a>
-        <nav class="top-nav">
-          <a href="index.html">Home</a>
-          <a href="platform.html">Platform</a>
-          <a href="clients.html">For clients</a>
-          <a href="talent.html" class="active">For talent</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="resources.html">Resources</a>
-          <a class="cta" href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="neural-network"></div>
+    </div>
 
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Grow on your terms</p>
-          <h1>Your AI copilots for every engagement.</h1>
-          <p>
-            NeuralGig equips freelancers with adaptive runbooks, personalized learning plans, and
-            transparent payment workflows so you can focus on delivery.
+    <!-- Navigation -->
+    <nav class="nav-modern">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <div class="neural-icon">
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="connection"></div>
+              <div class="connection"></div>
+            </div>
+          </div>
+          <span class="brand-text">Neural<span class="gradient-text">Gig</span></span>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link" data-text="Home">Home</a>
+          <a href="platform.html" class="nav-link" data-text="Platform">Platform</a>
+          <a href="clients.html" class="nav-link" data-text="Clients">Clients</a>
+          <a href="talent.html" class="nav-link active" data-text="Talent">Talent</a>
+          <a href="pricing.html" class="nav-link" data-text="Pricing">Pricing</a>
+          <a href="resources.html" class="nav-link" data-text="Resources">Resources</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="btn-ghost">Sign In</button>
+          <button class="btn-primary">
+            <span>Join Network</span>
+            <div class="btn-shine"></div>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-modern">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">🚀</div>
+            <span>Elite Talent Network</span>
+            <div class="badge-pulse"></div>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-line">Accelerate your career</span>
+            <span class="title-line gradient-text">with premium projects</span>
+            <span class="title-line">and AI-powered opportunities</span>
+          </h1>
+          
+          <p class="hero-description">
+            Join the world's most exclusive freelancer network. Access high-paying projects, 
+            work with top companies, and grow your skills with personalized AI coaching 
+            and career development programs.
           </p>
+          
           <div class="hero-actions">
-            <a class="button primary" href="index.html#workspace">Join the roster</a>
-            <a class="button ghost" href="resources.html">Browse resources</a>
+            <button class="btn-hero-primary" onclick="scrollToBenefits()">
+              <span>Join the Network</span>
+              <div class="btn-glow"></div>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="btn-hero-secondary" onclick="openApplication()">
+              <span>Apply Now</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000">0</div>
+              <div class="stat-label">Elite freelancers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="150">0</div>
+              <div class="stat-label">Average hourly rate</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="95">0</div>
+              <div class="stat-label">Success rate</div>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <h2>What you unlock</h2>
-          <ul class="pill-list">
-            <li>AI skill coach for new tooling</li>
-            <li>Instant onboarding playbooks</li>
-            <li>Automated milestone updates</li>
-            <li>Predictable payouts with escrow</li>
-          </ul>
+        
+        <div class="hero-visual">
+          <div class="talent-dashboard">
+            <div class="dashboard-header">
+              <h3>Talent Dashboard</h3>
+              <div class="dashboard-status">
+                <div class="status-dot active"></div>
+                <span>Available for Projects</span>
+              </div>
+            </div>
+            <div class="dashboard-content">
+              <div class="profile-card">
+                <div class="profile-avatar">
+                  <div class="avatar-placeholder">JD</div>
+                </div>
+                <div class="profile-info">
+                  <h4>John Developer</h4>
+                  <p>Senior Full-Stack Engineer</p>
+                  <div class="profile-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>4.9/5.0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">AWS</span>
+              </div>
+              <div class="earnings-card">
+                <div class="earnings-value">$12,450</div>
+                <div class="earnings-label">This Month</div>
+                <div class="earnings-trend up">+23%</div>
+              </div>
+              <div class="project-card">
+                <div class="project-title">AI Platform Development</div>
+                <div class="project-status">In Progress</div>
+                <div class="project-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%"></div>
+                  </div>
+                  <span>65% Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container">
-        <header class="section-header">
-          <h2>A tailored experience from day zero</h2>
-          <p>Freelancers receive targeted support before, during, and after every project.</p>
-        </header>
-        <div class="highlight-grid">
-          <article class="card">
-            <h3>Personalized onboarding</h3>
-            <p>
-              AI copilots map project context, stakeholders, codebases, and checklists so you can
-              start contributing immediately.
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+      <div class="benefits-container">
+        <div class="section-header">
+          <h2 class="section-title">Why Join NeuralGig?</h2>
+          <p class="section-subtitle">Exclusive benefits for elite talent</p>
+        </div>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 1l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Premium Projects</h3>
+            <p class="benefit-description">
+              Access to high-paying projects from Fortune 500 companies and innovative startups. 
+              Average project value: $50K+ with rates up to $300/hour.
             </p>
-          </article>
-          <article class="card">
-            <h3>Integrated tooling</h3>
-            <p>
-              Provision the IDE, analytics stack, and documentation tools you prefer—synced across
-              every engagement.
+            <div class="benefit-highlight">
+              <span class="highlight-text">3x higher rates</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">AI-Powered Matching</h3>
+            <p class="benefit-description">
+              Our AI finds perfect project matches based on your skills, preferences, 
+              and career goals. No more endless bidding or project hunting.
             </p>
-          </article>
-          <article class="card">
-            <h3>Learning loops</h3>
-            <p>
-              Automatic skill insights recommend certifications and micro-learnings that keep you on
-              the cutting edge.
+            <div class="benefit-highlight">
+              <span class="highlight-text">95% match accuracy</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Career Development</h3>
+            <p class="benefit-description">
+              Personalized learning paths, skill assessments, and mentorship programs 
+              to accelerate your career growth and stay ahead of industry trends.
             </p>
-          </article>
-          <article class="card">
-            <h3>Transparent compensation</h3>
-            <p>
-              Milestone dashboards show approvals, release windows, and payout receipts in real time.
+            <div class="benefit-highlight">
+              <span class="highlight-text">Free upskilling</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 1v6m0 6v6m11-7H5m14 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Guaranteed Payments</h3>
+            <p class="benefit-description">
+              Secure milestone-based payments with escrow protection. Get paid on time, 
+              every time, with transparent fee structures and instant payouts.
             </p>
-          </article>
+            <div class="benefit-highlight">
+              <span class="highlight-text">100% payment security</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Elite Community</h3>
+            <p class="benefit-description">
+              Connect with top-tier developers, designers, and consultants. 
+              Join exclusive events, masterclasses, and networking opportunities.
+            </p>
+            <div class="benefit-highlight">
+              <span class="highlight-text">10K+ members</span>
+            </div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Flexible Work</h3>
+            <p class="benefit-description">
+              Work on your terms with flexible schedules, remote opportunities, 
+              and project-based engagements that fit your lifestyle.
+            </p>
+            <div class="benefit-highlight">
+              <span class="highlight-text">100% remote</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section muted">
-      <div class="container split">
-        <div>
-          <h2>Community built for collaboration</h2>
-          <p>
-            Join curated guilds organized by craft, share best practices, and collaborate with pods
-            that trust each other’s craft.
-          </p>
-          <ul class="checklist">
-            <li>Invite-only guild channels moderated by NeuralGig mentors.</li>
-            <li>Playbooks for remote rituals, retrospectives, and async delivery.</li>
-            <li>Spotlight programs that showcase your achievements to new clients.</li>
-          </ul>
+    <!-- Success Stories Section -->
+    <section class="talent-stories-section">
+      <div class="stories-container">
+        <div class="section-header">
+          <h2 class="section-title">Talent Success Stories</h2>
+          <p class="section-subtitle">Real stories from our elite freelancer network</p>
         </div>
-        <div class="card">
-          <h3>Guild calendar</h3>
-          <ul class="stacked-list">
-            <li>
-              <strong>Weekly standups</strong>
-              <span>Async sync with your pod to plan deliverables and unblock dependencies.</span>
-            </li>
-            <li>
-              <strong>Office hours</strong>
-              <span>Meet with AI enablement coaches for tooling walkthroughs.</span>
-            </li>
-            <li>
-              <strong>Demo day</strong>
-              <span>Showcase deliverables to the client community and expand your reach.</span>
-            </li>
-          </ul>
+        
+        <div class="stories-grid">
+          <div class="story-card">
+            <div class="story-header">
+              <div class="talent-avatar">
+                <div class="avatar-placeholder">SM</div>
+              </div>
+              <div class="story-meta">
+                <h4>Sarah Martinez</h4>
+                <span class="role">Senior React Developer</span>
+              </div>
+            </div>
+            <div class="story-content">
+              <blockquote>
+                "NeuralGig transformed my freelance career. I went from $75/hour to $200/hour 
+                in just 6 months. The AI matching found me perfect projects that matched my skills."
+              </blockquote>
+              <div class="story-results">
+                <div class="result-item">
+                  <span class="result-value">167%</span>
+                  <span class="result-label">Rate increase</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-value">$180K</span>
+                  <span class="result-label">Annual income</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-value">15</span>
+                  <span class="result-label">Projects completed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="talent-avatar">
+                <div class="avatar-placeholder">AK</div>
+              </div>
+              <div class="story-meta">
+                <h4>Alex Kumar</h4>
+                <span class="role">AI/ML Engineer</span>
+              </div>
+            </div>
+            <div class="story-content">
+              <blockquote>
+                "The learning paths and skill assessments helped me transition from backend 
+                development to AI/ML. Now I'm working on cutting-edge projects with top companies."
+              </blockquote>
+              <div class="story-results">
+                <div class="result-item">
+                  <span class="result-value">New</span>
+                  <span class="result-label">Career path</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-value">$250</span>
+                  <span class="result-label">Hourly rate</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-value">8</span>
+                  <span class="result-label">New skills</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="talent-avatar">
+                <div class="avatar-placeholder">EJ</div>
+              </div>
+              <div class="story-meta">
+                <h4>Emily Johnson</h4>
+                <span class="role">UX/UI Designer</span>
+              </div>
+            </div>
+            <div class="story-content">
+              <blockquote">
+                "The community and networking opportunities are incredible. I've collaborated 
+                with designers from Google, Apple, and other top companies on amazing projects."
+              </blockquote>
+              <div class="story-results">
+                <div class="result-item">
+                  <span class="result-value">50+</span>
+                  <span class="result-label">Connections</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-value">$150</span>
+                  <span class="result-label">Hourly rate</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-value">12</span>
+                  <span class="result-label">Portfolio projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
-        <div class="footer-links">
-          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
-          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
-          <a href="index.html#workspace">Prototype console</a>
+    <!-- Application Process Section -->
+    <section class="application-section">
+      <div class="application-container">
+        <div class="section-header">
+          <h2 class="section-title">Join the Elite Network</h2>
+          <p class="section-subtitle">Simple application process with high standards</p>
+        </div>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Apply Online</h3>
+              <p>Submit your application with portfolio, resume, and skill assessments. 
+              We review applications within 48 hours.</p>
+              <div class="step-features">
+                <span class="feature-tag">Portfolio Review</span>
+                <span class="feature-tag">Skill Assessment</span>
+                <span class="feature-tag">Background Check</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Technical Interview</h3>
+              <p>Complete a technical interview with our senior engineers. 
+              We assess your problem-solving skills and technical expertise.</p>
+              <div class="step-features">
+                <span class="feature-tag">Live Coding</span>
+                <span class="feature-tag">System Design</span>
+                <span class="feature-tag">Behavioral Questions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Onboarding</h3>
+              <p>Welcome to the network! Complete your profile, set preferences, 
+              and start receiving matched project opportunities.</p>
+              <div class="step-features">
+                <span class="feature-tag">Profile Setup</span>
+                <span class="feature-tag">Preference Setting</span>
+                <span class="feature-tag">First Project</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="application-cta">
+          <div class="cta-content">
+            <h3>Ready to join the elite?</h3>
+            <p>Start your application today and unlock premium opportunities.</p>
+            <button class="btn-primary large">
+              <span>Start Application</span>
+              <div class="btn-shine"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+      <div class="skills-container">
+        <div class="section-header">
+          <h2 class="section-title">In-Demand Skills</h2>
+          <p class="section-subtitle">High-paying opportunities in these areas</p>
+        </div>
+        
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Next.js</span>
+            </div>
+            <div class="skill-stats">
+              <span class="avg-rate">$120-200/hr</span>
+              <span class="demand">High Demand</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Go</span>
+              <span class="skill-tag">Rust</span>
+            </div>
+            <div class="skill-stats">
+              <span class="avg-rate">$130-220/hr</span>
+              <span class="demand">High Demand</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>AI/ML Engineering</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">OpenAI</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">Hugging Face</span>
+            </div>
+            <div class="skill-stats">
+              <span class="avg-rate">$200-350/hr</span>
+              <span class="demand">Very High</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>DevOps & Cloud</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">Azure</span>
+            </div>
+            <div class="skill-stats">
+              <span class="avg-rate">$140-250/hr</span>
+              <span class="demand">High Demand</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Mobile Development</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">iOS</span>
+              <span class="skill-tag">Android</span>
+              <span class="skill-tag">Swift</span>
+            </div>
+            <div class="skill-stats">
+              <span class="avg-rate">$110-190/hr</span>
+              <span class="demand">High Demand</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Design & UX</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Sketch</span>
+              <span class="skill-tag">Adobe XD</span>
+              <span class="skill-tag">User Research</span>
+              <span class="skill-tag">Prototyping</span>
+            </div>
+            <div class="skill-stats">
+              <span class="avg-rate">$100-180/hr</span>
+              <span class="demand">High Demand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2>Ready to join the elite?</h2>
+          <p>Start your application today and unlock premium opportunities with top companies.</p>
+          <div class="cta-actions">
+            <button class="btn-primary large">
+              <span>Apply Now</span>
+              <div class="btn-shine"></div>
+            </button>
+            <button class="btn-ghost large">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="neural-icon">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+              </div>
+              <span>Neural<span class="gradient-text">Gig</span></span>
+            </div>
+            <p class="footer-tagline">Crafted for AI-native talent networks</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Platform</h4>
+              <a href="platform.html">Features</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="resources.html">Resources</a>
+            </div>
+            <div class="footer-section">
+              <h4>Community</h4>
+              <a href="clients.html">For Clients</a>
+              <a href="talent.html">For Talent</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+              <h4>Developers</h4>
+              <a href="../README.md" target="_blank" rel="noopener">Documentation</a>
+              <a href="../docs/PRD.md" target="_blank" rel="noopener">Product Brief</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> NeuralGig Labs. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <template id="alert-template">
-      <div class="alert">
-        <span class="message"></span>
-        <button type="button" class="close" aria-label="Close">&times;</button>
-      </div>
-    </template>
-
-    <div id="alerts" aria-live="polite"></div>
-
+    <!-- Scripts -->
     <script type="module" src="app.js"></script>
+    <script>
+      function scrollToBenefits() {
+        document.getElementById('benefits').scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function openApplication() {
+        // Scroll to application section
+        document.querySelector('.application-section').scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
   </body>
 </html>

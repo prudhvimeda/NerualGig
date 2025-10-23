@@ -2,156 +2,689 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Compare NeuralGig pricing for clients and freelancers." />
-    <title>NeuralGig • Pricing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="NeuralGig Pricing - Flexible pricing plans for teams of all sizes. Start free and scale with transparent, value-based pricing."
+    />
+    <title>Pricing • NeuralGig 2030</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
   </head>
   <body>
-    <header class="top-bar">
-      <div class="container">
-        <a class="brand" href="index.html">Neural<span>Gig</span></a>
-        <nav class="top-nav">
-          <a href="index.html">Home</a>
-          <a href="platform.html">Platform</a>
-          <a href="clients.html">For clients</a>
-          <a href="talent.html">For talent</a>
-          <a href="pricing.html" class="active">Pricing</a>
-          <a href="resources.html">Resources</a>
-          <a class="cta" href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="neural-network"></div>
+    </div>
 
-    <section class="page-hero accent">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Aligned incentives</p>
-          <h1>Simple, transparent pricing for every partner.</h1>
-          <p>
-            Clients pay a platform fee based on milestone volume, while freelancers unlock AI
-            copilots and growth programs for free.
+    <!-- Navigation -->
+    <nav class="nav-modern">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <div class="neural-icon">
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="connection"></div>
+              <div class="connection"></div>
+            </div>
+          </div>
+          <span class="brand-text">Neural<span class="gradient-text">Gig</span></span>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link" data-text="Home">Home</a>
+          <a href="platform.html" class="nav-link" data-text="Platform">Platform</a>
+          <a href="clients.html" class="nav-link" data-text="Clients">Clients</a>
+          <a href="talent.html" class="nav-link" data-text="Talent">Talent</a>
+          <a href="pricing.html" class="nav-link active" data-text="Pricing">Pricing</a>
+          <a href="resources.html" class="nav-link" data-text="Resources">Resources</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="btn-ghost">Sign In</button>
+          <button class="btn-primary">
+            <span>Get Started</span>
+            <div class="btn-shine"></div>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-modern">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">💰</div>
+            <span>Transparent Pricing</span>
+            <div class="badge-pulse"></div>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-line">Simple, transparent</span>
+            <span class="title-line gradient-text">pricing that scales</span>
+            <span class="title-line">with your success</span>
+          </h1>
+          
+          <p class="hero-description">
+            Start free and scale as you grow. No hidden fees, no surprises. 
+            Pay only for what you use with our value-based pricing model.
           </p>
+          
           <div class="hero-actions">
-            <a class="button primary" href="contact.html">Request a proposal</a>
-            <a class="button ghost" href="../docs/PRD.md" target="_blank" rel="noopener"
-              >See product scope</a
-            >
+            <button class="btn-hero-primary" onclick="scrollToPlans()">
+              <span>View Plans</span>
+              <div class="btn-glow"></div>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="btn-hero-secondary" onclick="openCalculator()">
+              <span>Calculate Savings</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">% average savings</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="30">0</div>
+              <div class="stat-label">Day free trial</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="24">0</div>
+              <div class="stat-label">/7 support</div>
+            </div>
           </div>
         </div>
-        <div class="card pricing-card">
-          <h2>Value snapshot</h2>
-          <ul class="pill-list">
-            <li>No-cost onboarding for freelancers</li>
-            <li>Performance-based client fee tiers</li>
-            <li>Payments released within 24 hours</li>
-            <li>Dedicated success partner above $250k ARR</li>
-          </ul>
+        
+        <div class="hero-visual">
+          <div class="pricing-calculator">
+            <div class="calculator-header">
+              <h3>ROI Calculator</h3>
+              <div class="calculator-subtitle">See your potential savings</div>
+            </div>
+            <div class="calculator-content">
+              <div class="calculator-input">
+                <label>Team Size</label>
+                <div class="input-group">
+                  <input type="range" min="1" max="100" value="10" id="teamSize">
+                  <span class="input-value">10</span>
+                </div>
+              </div>
+              <div class="calculator-input">
+                <label>Project Duration (months)</label>
+                <div class="input-group">
+                  <input type="range" min="1" max="24" value="6" id="projectDuration">
+                  <span class="input-value">6</span>
+                </div>
+              </div>
+              <div class="calculator-results">
+                <div class="result-item">
+                  <span class="result-label">Traditional Hiring</span>
+                  <span class="result-value">$480K</span>
+                </div>
+                <div class="result-item">
+                  <span class="result-label">With NeuralGig</span>
+                  <span class="result-value">$240K</span>
+                </div>
+                <div class="result-item highlight">
+                  <span class="result-label">You Save</span>
+                  <span class="result-value">$240K</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container">
-        <header class="section-header">
-          <h2>Client platform fees</h2>
-          <p>Choose the tier that matches your annual freelance investment.</p>
-        </header>
-        <div class="pricing-table">
-          <article class="card">
-            <h3>Launch</h3>
-            <p class="price">3% of milestone volume</p>
-            <ul class="feature-list">
-              <li>Up to $100k annual spend</li>
-              <li>Access to AI matching and onboarding</li>
-              <li>Escrow-backed payment workflows</li>
-              <li>Email support</li>
-            </ul>
-            <a class="button ghost" href="contact.html">Start pilot</a>
-          </article>
-          <article class="card highlighted">
-            <h3>Scale</h3>
-            <p class="price">2.25% of milestone volume</p>
-            <ul class="feature-list">
-              <li>$100k–$500k annual spend</li>
-              <li>Dedicated success partner</li>
-              <li>Custom policy packs</li>
-              <li>Analytics workspace</li>
-            </ul>
-            <a class="button primary" href="contact.html">Book workshop</a>
-          </article>
-          <article class="card">
-            <h3>Enterprise</h3>
-            <p class="price">Custom</p>
-            <ul class="feature-list">
-              <li>Above $500k annual spend</li>
-              <li>Private talent clouds</li>
-              <li>Marketplace revenue share options</li>
-              <li>Premium compliance and integrations</li>
-            </ul>
-            <a class="button ghost" href="contact.html">Talk to sales</a>
-          </article>
+    <!-- Pricing Toggle -->
+    <section class="pricing-toggle-section">
+      <div class="pricing-toggle-container">
+        <div class="toggle-wrapper">
+          <span class="toggle-label">Monthly</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="pricingToggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
         </div>
       </div>
     </section>
 
-    <section class="page-section muted">
-      <div class="container split">
-        <div>
-          <h2>Freelancer benefits</h2>
-          <p>Unlock NeuralGig tools for free and only pay standard payment processing fees.</p>
-          <ul class="checklist">
-            <li>AI copilots and personalized learning modules.</li>
-            <li>Automated invoicing with milestone approvals.</li>
-            <li>Community events, showcases, and mentoring.</li>
-          </ul>
+    <!-- Pricing Plans Section -->
+    <section id="plans" class="pricing-plans-section">
+      <div class="pricing-plans-container">
+        <div class="section-header">
+          <h2 class="section-title">Choose Your Plan</h2>
+          <p class="section-subtitle">Flexible pricing for teams of all sizes</p>
         </div>
-        <div class="card">
-          <h3>Included tools</h3>
-          <ul class="stacked-list">
-            <li>
-              <strong>Copilot Studio</strong>
-              <span>Generate onboarding plans, briefs, and async updates.</span>
-            </li>
-            <li>
-              <strong>Workflow Hub</strong>
-              <span>Track tasks, rituals, and knowledge bases in one place.</span>
-            </li>
-            <li>
-              <strong>Signal Vault</strong>
-              <span>Share case studies and proof points with prospective clients.</span>
-            </li>
-          </ul>
+        
+        <div class="pricing-grid">
+          <!-- Starter Plan -->
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Starter</h3>
+              <p class="plan-description">Perfect for small teams and startups</p>
+              <div class="plan-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount monthly">99</span>
+                <span class="price-amount annual">79</span>
+                <span class="price-period">/month</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Up to 5 team members</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>3 active projects</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Basic AI matching</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Email support</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Standard integrations</span>
+              </div>
+            </div>
+            <div class="plan-cta">
+              <button class="btn-ghost full-width">Start Free Trial</button>
+            </div>
+          </div>
+
+          <!-- Professional Plan -->
+          <div class="pricing-card featured">
+            <div class="plan-badge">Most Popular</div>
+            <div class="plan-header">
+              <h3 class="plan-name">Professional</h3>
+              <p class="plan-description">Ideal for growing companies</p>
+              <div class="plan-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount monthly">299</span>
+                <span class="price-amount annual">239</span>
+                <span class="price-period">/month</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Up to 25 team members</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Unlimited projects</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Advanced AI matching</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Priority support</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Advanced analytics</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Custom integrations</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Team collaboration tools</span>
+              </div>
+            </div>
+            <div class="plan-cta">
+              <button class="btn-primary full-width">Start Free Trial</button>
+            </div>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Enterprise</h3>
+              <p class="plan-description">For large organizations</p>
+              <div class="plan-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount monthly">999</span>
+                <span class="price-amount annual">799</span>
+                <span class="price-period">/month</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Unlimited team members</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Unlimited projects</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>AI-powered insights</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>24/7 dedicated support</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Custom AI models</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>White-label options</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Enterprise security</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Dedicated account manager</span>
+              </div>
+            </div>
+            <div class="plan-cta">
+              <button class="btn-ghost full-width">Contact Sales</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
-        <div class="footer-links">
-          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
-          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
-          <a href="index.html#workspace">Prototype console</a>
+    <!-- Add-ons Section -->
+    <section class="addons-section">
+      <div class="addons-container">
+        <div class="section-header">
+          <h2 class="section-title">Add-ons & Extensions</h2>
+          <p class="section-subtitle">Enhance your plan with additional features</p>
+        </div>
+        
+        <div class="addons-grid">
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="addon-title">AI Coaching</h3>
+            <p class="addon-description">Personalized AI coaching for your team members to accelerate skill development.</p>
+            <div class="addon-price">$50/user/month</div>
+            <button class="btn-ghost small">Add to Plan</button>
+          </div>
+
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="addon-title">Advanced Analytics</h3>
+            <p class="addon-description">Deep insights and predictive analytics for better project planning and resource allocation.</p>
+            <div class="addon-price">$100/month</div>
+            <button class="btn-ghost small">Add to Plan</button>
+          </div>
+
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="addon-title">Priority Matching</h3>
+            <p class="addon-description">Get first access to top talent and priority matching for urgent projects.</p>
+            <div class="addon-price">$200/month</div>
+            <button class="btn-ghost small">Add to Plan</button>
+          </div>
+
+          <div class="addon-card">
+            <div class="addon-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="addon-title">Dedicated Support</h3>
+            <p class="addon-description">Dedicated account manager and priority support for mission-critical projects.</p>
+            <div class="addon-price">$500/month</div>
+            <button class="btn-ghost small">Add to Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about our pricing</p>
+        </div>
+        
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the free trial work?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>You get 30 days free with full access to all features. No credit card required to start. You can cancel anytime during the trial period.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I change plans anytime?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What payment methods do you accept?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also pay via invoice.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is there a setup fee?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>No setup fees for any plan. You only pay the monthly or annual subscription cost. Some add-ons may have one-time setup costs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you offer custom pricing?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, for large organizations with specific needs, we offer custom pricing and features. Contact our sales team to discuss your requirements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What happens if I exceed my plan limits?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>We'll notify you when you're approaching your limits and help you upgrade to a higher plan. We never cut off service without warning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2>Ready to get started?</h2>
+          <p>Join thousands of teams already using NeuralGig to build better, faster, and smarter.</p>
+          <div class="cta-actions">
+            <button class="btn-primary large">
+              <span>Start Free Trial</span>
+              <div class="btn-shine"></div>
+            </button>
+            <button class="btn-ghost large">
+              <span>Contact Sales</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="neural-icon">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+              </div>
+              <span>Neural<span class="gradient-text">Gig</span></span>
+            </div>
+            <p class="footer-tagline">Crafted for AI-native talent networks</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Platform</h4>
+              <a href="platform.html">Features</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="resources.html">Resources</a>
+            </div>
+            <div class="footer-section">
+              <h4>Community</h4>
+              <a href="clients.html">For Clients</a>
+              <a href="talent.html">For Talent</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+              <h4>Developers</h4>
+              <a href="../README.md" target="_blank" rel="noopener">Documentation</a>
+              <a href="../docs/PRD.md" target="_blank" rel="noopener">Product Brief</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> NeuralGig Labs. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <template id="alert-template">
-      <div class="alert">
-        <span class="message"></span>
-        <button type="button" class="close" aria-label="Close">&times;</button>
-      </div>
-    </template>
-
-    <div id="alerts" aria-live="polite"></div>
-
+    <!-- Scripts -->
     <script type="module" src="app.js"></script>
+    <script>
+      function scrollToPlans() {
+        document.getElementById('plans').scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function openCalculator() {
+        // Scroll to calculator in hero section
+        document.querySelector('.pricing-calculator').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Pricing toggle functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('pricingToggle');
+        const monthlyPrices = document.querySelectorAll('.monthly');
+        const annualPrices = document.querySelectorAll('.annual');
+        
+        toggle.addEventListener('change', function() {
+          if (this.checked) {
+            monthlyPrices.forEach(price => price.style.display = 'none');
+            annualPrices.forEach(price => price.style.display = 'inline');
+          } else {
+            monthlyPrices.forEach(price => price.style.display = 'inline');
+            annualPrices.forEach(price => price.style.display = 'none');
+          }
+        });
+
+        // FAQ toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          const answer = item.querySelector('.faq-answer');
+          
+          question.addEventListener('click', () => {
+            const isOpen = answer.style.display === 'block';
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                otherItem.querySelector('.faq-answer').style.display = 'none';
+                otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+              }
+            });
+            
+            // Toggle current item
+            answer.style.display = isOpen ? 'none' : 'block';
+            question.querySelector('.faq-icon').style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+          });
+        });
+
+        // Calculator functionality
+        const teamSizeSlider = document.getElementById('teamSize');
+        const projectDurationSlider = document.getElementById('projectDuration');
+        const teamSizeValue = teamSizeSlider.nextElementSibling;
+        const projectDurationValue = projectDurationSlider.nextElementSibling;
+        
+        function updateCalculator() {
+          const teamSize = parseInt(teamSizeSlider.value);
+          const duration = parseInt(projectDurationSlider.value);
+          
+          teamSizeValue.textContent = teamSize;
+          projectDurationValue.textContent = duration;
+          
+          // Calculate costs (simplified calculation)
+          const traditionalCost = teamSize * 8000 * duration; // $8K per person per month
+          const neuralGigCost = teamSize * 4000 * duration; // $4K per person per month
+          const savings = traditionalCost - neuralGigCost;
+          
+          // Update display
+          document.querySelector('.result-item:nth-child(1) .result-value').textContent = `$${(traditionalCost / 1000).toFixed(0)}K`;
+          document.querySelector('.result-item:nth-child(2) .result-value').textContent = `$${(neuralGigCost / 1000).toFixed(0)}K`;
+          document.querySelector('.result-item:nth-child(3) .result-value').textContent = `$${(savings / 1000).toFixed(0)}K`;
+        }
+        
+        teamSizeSlider.addEventListener('input', updateCalculator);
+        projectDurationSlider.addEventListener('input', updateCalculator);
+        
+        // Initialize calculator
+        updateCalculator();
+      });
+    </script>
   </body>
 </html>

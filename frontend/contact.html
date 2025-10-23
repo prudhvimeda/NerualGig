@@ -2,130 +2,481 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta
       name="description"
-      content="Connect with the NeuralGig team to launch pilots, join the freelancer roster, or partner on AI enablement."
+      content="Contact NeuralGig - Get in touch for partnerships, support, or to learn more about our AI-powered talent management platform."
     />
-    <title>NeuralGig • Contact</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Contact • NeuralGig 2030</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
   </head>
   <body>
-    <header class="top-bar">
-      <div class="container">
-        <a class="brand" href="index.html">Neural<span>Gig</span></a>
-        <nav class="top-nav">
-          <a href="index.html">Home</a>
-          <a href="platform.html">Platform</a>
-          <a href="clients.html">For clients</a>
-          <a href="talent.html">For talent</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="resources.html">Resources</a>
-          <a class="cta active" href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="neural-network"></div>
+    </div>
 
-    <section class="page-hero accent">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Let’s collaborate</p>
-          <h1>Share your goals and we’ll craft a launch plan.</h1>
-          <p>
-            Tell us about your next initiative or the skills you’d like to bring to the network.
-            We’ll follow up within one business day.
+    <!-- Navigation -->
+    <nav class="nav-modern">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <div class="neural-icon">
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="connection"></div>
+              <div class="connection"></div>
+            </div>
+          </div>
+          <span class="brand-text">Neural<span class="gradient-text">Gig</span></span>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link" data-text="Home">Home</a>
+          <a href="platform.html" class="nav-link" data-text="Platform">Platform</a>
+          <a href="clients.html" class="nav-link" data-text="Clients">Clients</a>
+          <a href="talent.html" class="nav-link" data-text="Talent">Talent</a>
+          <a href="pricing.html" class="nav-link" data-text="Pricing">Pricing</a>
+          <a href="resources.html" class="nav-link" data-text="Resources">Resources</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="btn-ghost">Sign In</button>
+          <button class="btn-primary">
+            <span>Get Started</span>
+            <div class="btn-shine"></div>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-modern">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">💬</div>
+            <span>Get in Touch</span>
+            <div class="badge-pulse"></div>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-line">Let's build the future</span>
+            <span class="title-line gradient-text">of work together</span>
+          </h1>
+          
+          <p class="hero-description">
+            Ready to transform your talent management? Have questions about our platform? 
+            We're here to help you succeed with AI-powered solutions.
           </p>
+          
+          <div class="hero-actions">
+            <button class="btn-hero-primary" onclick="scrollToContact()">
+              <span>Start a Conversation</span>
+              <div class="btn-glow"></div>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="btn-hero-secondary" onclick="openCalendar()">
+              <span>Schedule a Demo</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="card">
-          <h2>Direct lines</h2>
-          <ul class="stacked-list">
-            <li>
-              <strong>Sales</strong>
-              <span><a href="mailto:launch@neuralgig.ai" class="inline-link">launch@neuralgig.ai</a></span>
-            </li>
-            <li>
-              <strong>Talent success</strong>
-              <span><a href="mailto:guilds@neuralgig.ai" class="inline-link">guilds@neuralgig.ai</a></span>
-            </li>
-            <li>
-              <strong>Support</strong>
-              <span><a href="mailto:support@neuralgig.ai" class="inline-link">support@neuralgig.ai</a></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container split contact">
-        <form class="card contact-form" action="https://example.com" method="post">
-          <h2>Tell us about your needs</h2>
-          <label>Name<input name="name" required /></label>
-          <label>Email<input name="email" type="email" required /></label>
-          <label>Organization<input name="organization" /></label>
-          <label class="select">How can we help?
-            <select name="intent" required>
-              <option value="pilot">Launch a client pilot</option>
-              <option value="talent">Join the freelancer roster</option>
-              <option value="partnership">Partnership opportunity</option>
-              <option value="support">Platform support</option>
-            </select>
-          </label>
-          <label>Project details<textarea name="details" placeholder="Share goals, timelines, or skills needed."></textarea></label>
-          <button type="submit">Submit</button>
-          <p class="muted small-print">We’ll send a confirmation email with next steps.</p>
-        </form>
-        <div>
-          <h2>What happens next?</h2>
-          <ul class="stacked-list">
-            <li>
-              <strong>Discovery call</strong>
-              <span>We align on objectives, scope, and success metrics.</span>
-            </li>
-            <li>
-              <strong>Curated proposal</strong>
-              <span>Receive pod recommendations, timelines, and pricing.</span>
-            </li>
-            <li>
-              <strong>Launch readiness</strong>
-              <span>AI copilots prep onboarding, tools, and milestone plans.</span>
-            </li>
-          </ul>
-          <div class="cta-banner">
-            <h3>Prefer self-serve?</h3>
-            <p>Spin up a sandbox project directly in the prototype console.</p>
-            <a class="button ghost" href="index.html#workspace">Open console</a>
+        
+        <div class="hero-visual">
+          <div class="contact-preview">
+            <div class="preview-header">
+              <h3>Contact Options</h3>
+            </div>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">📧</div>
+                <div class="method-info">
+                  <h4>Email Support</h4>
+                  <p>Get help within 24 hours</p>
+                  <span class="method-detail">support@neuralgig.com</span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">💬</div>
+                <div class="method-info">
+                  <h4>Live Chat</h4>
+                  <p>Instant responses</p>
+                  <span class="method-detail">Available 24/7</span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">📞</div>
+                <div class="method-info">
+                  <h4>Phone Support</h4>
+                  <p>Speak with an expert</p>
+                  <span class="method-detail">+1 (555) 123-4567</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
-        <div class="footer-links">
-          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
-          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
-          <a href="index.html#workspace">Prototype console</a>
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="section-header">
+          <h2 class="section-title">Send us a Message</h2>
+          <p class="section-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="company">Company (Optional)</label>
+                <input type="text" id="company" name="company">
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="sales">Sales & Pricing</option>
+                  <option value="support">Technical Support</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="media">Media & Press</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label class="checkbox-modern">
+                  <input type="checkbox" name="newsletter" id="newsletter">
+                  <span class="checkmark"></span>
+                  <span class="checkbox-label">Subscribe to our newsletter for updates and insights</span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn-submit large">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+          
+          <div class="contact-info">
+            <div class="info-section">
+              <h3>Get in Touch</h3>
+              <p>We're here to help you succeed with AI-powered talent management. Reach out to us through any of these channels.</p>
+            </div>
+            
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h4>Email</h4>
+                  <p>hello@neuralgig.com</p>
+                  <span>We'll respond within 24 hours</span>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                  <span>Mon-Fri, 9AM-6PM PST</span>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="detail-content">
+                  <h4>Office</h4>
+                  <p>123 Innovation Drive<br>San Francisco, CA 94105</p>
+                  <span>Visit us by appointment</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <h4>Follow Us</h4>
+              <div class="social-icons">
+                <a href="#" aria-label="Twitter">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Quick answers to common questions</p>
+        </div>
+        
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How quickly can I get started?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>You can get started immediately with our free trial. Setup takes less than 5 minutes, and you'll have access to all features for 30 days.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you offer custom integrations?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we offer custom integrations for enterprise customers. Our team can help integrate with your existing tools and workflows.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What kind of support do you provide?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>We provide 24/7 support via email, live chat, and phone. Enterprise customers get dedicated account managers and priority support.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is my data secure?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. We're SOC 2 Type II certified and use enterprise-grade security with end-to-end encryption for all data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="neural-icon">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+              </div>
+              <span>Neural<span class="gradient-text">Gig</span></span>
+            </div>
+            <p class="footer-tagline">Crafted for AI-native talent networks</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Platform</h4>
+              <a href="platform.html">Features</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="resources.html">Resources</a>
+            </div>
+            <div class="footer-section">
+              <h4>Community</h4>
+              <a href="clients.html">For Clients</a>
+              <a href="talent.html">For Talent</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+              <h4>Developers</h4>
+              <a href="../README.md" target="_blank" rel="noopener">Documentation</a>
+              <a href="../docs/PRD.md" target="_blank" rel="noopener">Product Brief</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> NeuralGig Labs. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <template id="alert-template">
-      <div class="alert">
-        <span class="message"></span>
-        <button type="button" class="close" aria-label="Close">&times;</button>
-      </div>
-    </template>
-
-    <div id="alerts" aria-live="polite"></div>
-
+    <!-- Scripts -->
     <script type="module" src="app.js"></script>
+    <script>
+      function scrollToContact() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function openCalendar() {
+        // Open calendar booking link
+        window.open('https://calendly.com/neuralgig/demo', '_blank');
+      }
+
+      // Contact form handling
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+              alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+              this.reset();
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }, 2000);
+          });
+        }
+
+        // FAQ toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          const answer = item.querySelector('.faq-answer');
+          
+          question.addEventListener('click', () => {
+            const isOpen = answer.style.display === 'block';
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                otherItem.querySelector('.faq-answer').style.display = 'none';
+                otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+              }
+            });
+            
+            // Toggle current item
+            answer.style.display = isOpen ? 'none' : 'block';
+            question.querySelector('.faq-icon').style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+          });
+        });
+      });
+    </script>
   </body>
 </html>

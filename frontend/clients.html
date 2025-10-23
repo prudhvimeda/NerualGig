@@ -1,148 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Learn how NeuralGig helps product and operations leaders launch projects with curated AI-supported freelancer teams."
-    />
-    <title>NeuralGig • Solutions for Clients</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="top-bar">
-      <div class="container">
-        <a class="brand" href="index.html">Neural<span>Gig</span></a>
-        <nav class="top-nav">
-          <a href="index.html">Home</a>
-          <a href="platform.html">Platform</a>
-          <a href="clients.html" class="active">For clients</a>
-          <a href="talent.html">For talent</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="resources.html">Resources</a>
-          <a class="cta" href="contact.html">Contact</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuralGig for Clients - Find and hire top freelancers for your projects. AI-powered matching, secure payments, and project management tools.">
+    <title>For Clients • NeuralGig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🧠</span>
+                        <span class="logo-text">NeuralGig</span>
+                    </div>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="platform.html" class="nav-link">Platform</a>
+                    <a href="clients.html" class="nav-link active">For Clients</a>
+                    <a href="talent.html" class="nav-link">For Talent</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-outline">Sign In</a>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
-      </div>
     </header>
 
-    <section class="page-hero accent">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Deliver outcomes faster</p>
-          <h1>Launch new initiatives with talent pods built for velocity.</h1>
-          <p>
-            NeuralGig assembles specialists that plug directly into your roadmap, while AI copilots
-            orchestrate onboarding, compliance, and delivery rituals.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="index.html#workspace">See matching in action</a>
-            <a class="button ghost" href="contact.html">Talk with us</a>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Find the perfect <span class="highlight">freelancer</span> for your project
+                    </h1>
+                    <p class="hero-description">
+                        Post your project and get matched with skilled professionals. Our AI-powered platform 
+                        ensures you find the right talent quickly and efficiently.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="index.html#clients-section" class="btn btn-primary btn-large">Post a Project</a>
+                        <a href="talent.html" class="btn btn-outline btn-large">Browse Talent</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="client-dashboard">
+                        <div class="dashboard-header">
+                            <h3>Project Dashboard</h3>
+                            <span class="status-badge">Active</span>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="project-card">
+                                <h4>E-commerce Website</h4>
+                                <p>React, Node.js, MongoDB</p>
+                                <div class="project-meta">
+                                    <span class="budget">$5,000 - $8,000</span>
+                                    <span class="timeline">2-4 weeks</span>
+                                </div>
+                                <div class="applicants">
+                                    <span class="applicant-count">12 applicants</span>
+                                    <div class="applicant-avatars">
+                                        <div class="avatar"></div>
+                                        <div class="avatar"></div>
+                                        <div class="avatar"></div>
+                                        <div class="avatar more">+9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card stats-card">
-          <h2>Why product and ops leaders choose NeuralGig</h2>
-          <ul class="pill-list">
-            <li>Elastic pods ready in under 48 hours</li>
-            <li>Contextual onboarding in minutes</li>
-            <li>Milestone escrow with automated approvals</li>
-            <li>Unified reporting across every program</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <section class="page-section">
-      <div class="container split">
-        <div>
-          <h2>Strategic pods for every stage of delivery</h2>
-          <p>
-            From discovery sprints to GTM execution, NeuralGig curates pods that combine cross-domain
-            expertise with proven collaboration history.
-          </p>
-          <ul class="checklist">
-            <li>Product discovery researchers paired with AI insight analysts.</li>
-            <li>Platform engineers and solution architects that already ship together.</li>
-            <li>Fractional PMs, designers, and marketers aligned to your rituals.</li>
-          </ul>
+    <!-- Benefits Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why clients choose NeuralGig</h2>
+                <p class="section-subtitle">Everything you need to find, hire, and manage top talent</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        </svg>
+                    </div>
+                    <h3>AI-Powered Matching</h3>
+                    <p>Get matched with the most qualified freelancers based on skills, experience, and project requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>Protected escrow system ensures your money is safe until work is completed to your satisfaction.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                        </svg>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>Built-in tools for milestone tracking, communication, and progress monitoring.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Verified Talent</h3>
+                    <p>All freelancers are verified and have proven track records with client reviews and ratings.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Pod blueprints</h3>
-          <dl class="blueprints">
-            <div>
-              <dt>Launch squad</dt>
-              <dd>Product lead, full-stack dev, marketing strategist.</dd>
-            </div>
-            <div>
-              <dt>Scale core</dt>
-              <dd>Platform engineer, data scientist, QA automation.</dd>
-            </div>
-            <div>
-              <dt>Adoption cell</dt>
-              <dd>Customer success, enablement specialist, AI trainer.</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
     </section>
 
-    <section class="page-section muted">
-      <div class="container">
-        <header class="section-header">
-          <h2>Governance built into every engagement</h2>
-          <p>Reduce risk with policy-aware workflows that meet your compliance standards.</p>
-        </header>
-        <div class="feature-grid">
-          <article class="feature card">
-            <h3>Automated intake</h3>
-            <p>
-              Customizable briefs capture security, privacy, and regional constraints before work
-              begins.
-            </p>
-          </article>
-          <article class="feature card">
-            <h3>Policy enforcement</h3>
-            <p>
-              NDAs, IP assignments, and data handling rules are embedded into every milestone.
-            </p>
-          </article>
-          <article class="feature card">
-            <h3>360° visibility</h3>
-            <p>
-              Dashboards surface capacity, spend, and status updates with AI explanations you can
-              share with stakeholders.
-            </p>
-          </article>
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">See how companies are building amazing projects with NeuralGig</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-content">
+                        <p>"NeuralGig helped us find the perfect developer for our mobile app. The AI matching was spot-on and saved us weeks of searching."</p>
+                    </div>
+                    <div class="story-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CTO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-content">
+                        <p>"The project management tools made it easy to track progress and communicate with our freelancer. Highly recommended!"</p>
+                    </div>
+                    <div class="story-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Mike Chen</h4>
+                            <p>Founder, DesignCo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-content">
+                        <p>"We've completed 15+ projects through NeuralGig. The quality of talent and the platform's features are outstanding."</p>
+                    </div>
+                    <div class="story-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Product Manager, InnovateLab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
-        <div class="footer-links">
-          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
-          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
-          <a href="index.html#workspace">Prototype console</a>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to start your project?</h2>
+                <p>Join thousands of clients who trust NeuralGig for their talent needs.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-primary btn-large">Post Your Project</a>
+                    <a href="#" class="btn btn-outline btn-large">Learn More</a>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🧠</span>
+                        <span class="logo-text">NeuralGig</span>
+                    </div>
+                    <p>Connecting talent with opportunity through AI-powered matching.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <a href="platform.html">Features</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="resources.html">Resources</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="clients.html">For Clients</a>
+                        <a href="talent.html">For Talent</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Documentation</a>
+                        <a href="#">API</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 NeuralGig. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <template id="alert-template">
-      <div class="alert">
-        <span class="message"></span>
-        <button type="button" class="close" aria-label="Close">&times;</button>
-      </div>
-    </template>
-
-    <div id="alerts" aria-live="polite"></div>
-
-    <script type="module" src="app.js"></script>
-  </body>
+    <script src="app.js"></script>
+</body>
 </html>

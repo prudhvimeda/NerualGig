@@ -130,3 +130,75 @@ def test_cors_preflight_request() -> None:
     )
     assert response.status_code == 200
     assert response.headers["access-control-allow-origin"] == "*"
+
+
+def test_new_portal_endpoints() -> None:
+    client = TestClient(create_app())
+
+    dashboard = client.get("/client/dashboard")
+    assert dashboard.status_code == 200
+    payload = dashboard.json()
+    assert payload["account"]["name"] == "Jordan Patel"
+    assert payload["recommendations"], "Expected at least one talent recommendation"
+
+    talent = client.get("/client/talent")
+    assert talent.status_code == 200
+    assert isinstance(talent.json(), list)
+
+    applications = client.get("/freelancer/applications")
+    assert applications.status_code == 200
+    assert isinstance(applications.json(), list)
+
+    learning = client.get("/freelancer/learning", params={"role": "full-stack", "model": "qwen"})
+    assert learning.status_code == 200
+    learning_payload = learning.json()
+    assert learning_payload["focusRole"] == "full-stack"
+    assert learning_payload["model"] == "qwen"
+    assert learning_payload["resources"], "Learning plan should include curated resources"
+
+
+def test_client_release_milestone() -> None:
+    client = TestClient(create_app())
+    response = client.post(
+        "/client/payments/release",
+        json={"project_id": "proj-gen-analytics", "milestone_name": "Research & architecture"},
+    )
+    assert response.status_code == 200
+    schedule = response.json()
+    milestones = {item["name"]: item for item in schedule["milestones"]}
+    assert milestones["Research & architecture"]["status"] == "released"
+
+
+def test_freelancer_application_flow() -> None:
+    client = TestClient(create_app())
+    apply_response = client.post("/freelancer/applications", json={"project_id": "proj-mlops-001"})
+    assert apply_response.status_code == 201
+    new_application = apply_response.json()
+    assert new_application["projectName"] == "Realtime anomaly detection platform"
+    withdraw_response = client.post(
+        "/freelancer/applications/withdraw",
+        json={"application_id": new_application["id"]},
+    )
+    assert withdraw_response.status_code == 200
+    withdrawn_payload = withdraw_response.json()
+    assert withdrawn_payload["status"] == "withdrawn"
+
+
+def test_assistant_chat_endpoint() -> None:
+    client = TestClient(create_app())
+    response = client.post(
+        "/assistant/chat",
+        json={
+            "message": "Give me one tip for remote onboarding.",
+            "model": "qwen",
+            "history": [
+                {"role": "user", "content": "I want to improve my async collaboration"},
+                {"role": "assistant", "content": "Consider writing daily summaries."},
+            ],
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert "reply" in payload
+    assert isinstance(payload["reply"], str)
+    assert payload["reply"]

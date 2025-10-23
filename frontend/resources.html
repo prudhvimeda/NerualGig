@@ -2,156 +2,588 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta
       name="description"
-      content="Browse NeuralGig resources, including AI playbooks, integration guides, and community programming."
+      content="NeuralGig Resources - Download playbooks, attend live sessions, and access learning materials to master AI-powered talent management."
     />
-    <title>NeuralGig • Resources</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Resources • NeuralGig 2030</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
   </head>
   <body>
-    <header class="top-bar">
-      <div class="container">
-        <a class="brand" href="index.html">Neural<span>Gig</span></a>
-        <nav class="top-nav">
-          <a href="index.html">Home</a>
-          <a href="platform.html">Platform</a>
-          <a href="clients.html">For clients</a>
-          <a href="talent.html">For talent</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="resources.html" class="active">Resources</a>
-          <a class="cta" href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="neural-network"></div>
+    </div>
 
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Build with confidence</p>
-          <h1>Guides, templates, and events to power every engagement.</h1>
-          <p>
-            Tap into AI playbooks, integration walkthroughs, and community programming curated for
-            both clients and freelancers.
+    <!-- Navigation -->
+    <nav class="nav-modern">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <div class="neural-icon">
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="node"></div>
+              <div class="connection"></div>
+              <div class="connection"></div>
+            </div>
+          </div>
+          <span class="brand-text">Neural<span class="gradient-text">Gig</span></span>
+        </div>
+        
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link" data-text="Home">Home</a>
+          <a href="platform.html" class="nav-link" data-text="Platform">Platform</a>
+          <a href="clients.html" class="nav-link" data-text="Clients">Clients</a>
+          <a href="talent.html" class="nav-link" data-text="Talent">Talent</a>
+          <a href="pricing.html" class="nav-link" data-text="Pricing">Pricing</a>
+          <a href="resources.html" class="nav-link active" data-text="Resources">Resources</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="btn-ghost">Sign In</button>
+          <button class="btn-primary">
+            <span>Get Started</span>
+            <div class="btn-shine"></div>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-modern">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">📚</div>
+            <span>Learning Center</span>
+            <div class="badge-pulse"></div>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-line">Master AI-powered</span>
+            <span class="title-line gradient-text">talent management</span>
+            <span class="title-line">with expert resources</span>
+          </h1>
+          
+          <p class="hero-description">
+            Access playbooks, guides, webinars, and best practices from industry experts. 
+            Learn how to build, manage, and scale elite talent networks with AI.
           </p>
+          
           <div class="hero-actions">
-            <a class="button primary" href="../README.md" target="_blank" rel="noopener"
-              >Developer docs</a
-            >
-            <a class="button ghost" href="../docs/PRD.md" target="_blank" rel="noopener"
-              >Product brief</a
-            >
+            <button class="btn-hero-primary" onclick="scrollToResources()">
+              <span>Explore Resources</span>
+              <div class="btn-glow"></div>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="btn-hero-secondary" onclick="openNewsletter()">
+              <span>Subscribe to Updates</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-target="500">0</div>
+              <div class="stat-label">Resources available</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">Expert contributors</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000">0</div>
+              <div class="stat-label">Community members</div>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <h2>Quick links</h2>
-          <ul class="stacked-list">
-            <li>
-              <strong>API reference</strong>
-              <span>Endpoints for matching, onboarding, and milestone management.</span>
-            </li>
-            <li>
-              <strong>Prototype console</strong>
-              <span>Explore the FastAPI demo flows from your browser.</span>
-            </li>
-            <li>
-              <strong>Community calendar</strong>
-              <span>Attend workshops, office hours, and showcase events.</span>
-            </li>
-          </ul>
+        
+        <div class="hero-visual">
+          <div class="resources-preview">
+            <div class="preview-header">
+              <h3>Featured Resources</h3>
+              <div class="preview-tabs">
+                <button class="tab active">Guides</button>
+                <button class="tab">Webinars</button>
+                <button class="tab">Templates</button>
+              </div>
+            </div>
+            <div class="preview-content">
+              <div class="resource-card">
+                <div class="resource-icon">📖</div>
+                <div class="resource-info">
+                  <h4>AI Talent Matching Guide</h4>
+                  <p>Complete guide to optimizing AI-powered talent matching</p>
+                  <div class="resource-meta">
+                    <span class="resource-type">PDF Guide</span>
+                    <span class="resource-duration">15 min read</span>
+                  </div>
+                </div>
+              </div>
+              <div class="resource-card">
+                <div class="resource-icon">🎥</div>
+                <div class="resource-info">
+                  <h4>Live Webinar: Scaling Teams</h4>
+                  <p>How to scale your development team with AI</p>
+                  <div class="resource-meta">
+                    <span class="resource-type">Webinar</span>
+                    <span class="resource-duration">45 min</span>
+                  </div>
+                </div>
+              </div>
+              <div class="resource-card">
+                <div class="resource-icon">📋</div>
+                <div class="resource-info">
+                  <h4>Project Brief Template</h4>
+                  <p>Template for creating effective project briefs</p>
+                  <div class="resource-meta">
+                    <span class="resource-type">Template</span>
+                    <span class="resource-duration">5 min setup</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container resource-grid">
-        <article class="card resource">
-          <h3>AI playbooks</h3>
-          <p>Ready-to-run copilots for onboarding, status updates, and retrospectives.</p>
-          <a class="inline-link" href="index.html#workspace">Launch prototype</a>
-        </article>
-        <article class="card resource">
-          <h3>Integration kits</h3>
-          <p>Connect NeuralGig with Notion, Linear, Slack, and custom internal tools.</p>
-          <a class="inline-link" href="../README.md" target="_blank" rel="noopener"
-            >View developer docs</a
-          >
-        </article>
-        <article class="card resource">
-          <h3>Policy templates</h3>
-          <p>Download compliance-ready NDAs, SOWs, and onboarding checklists.</p>
-          <a class="inline-link" href="../docs/PRD.md" target="_blank" rel="noopener"
-            >Read the PRD</a
-          >
-        </article>
-        <article class="card resource">
-          <h3>Community hub</h3>
-          <p>Join guild channels, attend live demos, and discover spotlight opportunities.</p>
-          <a class="inline-link" href="contact.html">Request access</a>
-        </article>
+    <!-- Resource Categories Section -->
+    <section id="resources" class="resources-section">
+      <div class="resources-container">
+        <div class="section-header">
+          <h2 class="section-title">Resource Library</h2>
+          <p class="section-subtitle">Everything you need to master AI-powered talent management</p>
+        </div>
+        
+        <div class="resource-categories">
+          <div class="category-card">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="category-title">Guides & Playbooks</h3>
+            <p class="category-description">Comprehensive guides and step-by-step playbooks for talent management best practices.</p>
+            <div class="category-stats">
+              <span class="stat">25+ guides</span>
+              <span class="stat">•</span>
+              <span class="stat">Updated weekly</span>
+            </div>
+            <div class="featured-resources">
+              <div class="resource-item">
+                <span class="resource-title">AI Matching Optimization</span>
+                <span class="resource-type">PDF</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Team Scaling Playbook</span>
+                <span class="resource-type">PDF</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Project Management Guide</span>
+                <span class="resource-type">PDF</span>
+              </div>
+            </div>
+            <button class="btn-ghost">View All Guides</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M23 7l-7 5 7 5V7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="category-title">Video Content</h3>
+            <p class="category-description">Webinars, tutorials, and masterclasses from industry experts and NeuralGig team.</p>
+            <div class="category-stats">
+              <span class="stat">50+ videos</span>
+              <span class="stat">•</span>
+              <span class="stat">Live sessions weekly</span>
+            </div>
+            <div class="featured-resources">
+              <div class="resource-item">
+                <span class="resource-title">AI in Talent Management</span>
+                <span class="resource-type">Webinar</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Building Remote Teams</span>
+                <span class="resource-type">Tutorial</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Project Success Stories</span>
+                <span class="resource-type">Case Study</span>
+              </div>
+            </div>
+            <button class="btn-ghost">View All Videos</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="category-title">Templates & Tools</h3>
+            <p class="category-description">Ready-to-use templates, checklists, and tools to streamline your workflow.</p>
+            <div class="category-stats">
+              <span class="stat">100+ templates</span>
+              <span class="stat">•</span>
+              <span class="stat">Customizable</span>
+            </div>
+            <div class="featured-resources">
+              <div class="resource-item">
+                <span class="resource-title">Project Brief Template</span>
+                <span class="resource-type">Docx</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Team Onboarding Checklist</span>
+                <span class="resource-type">PDF</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Performance Review Form</span>
+                <span class="resource-type">Docx</span>
+              </div>
+            </div>
+            <button class="btn-ghost">View All Templates</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="category-title">Community</h3>
+            <p class="category-description">Connect with peers, share experiences, and learn from the community.</p>
+            <div class="category-stats">
+              <span class="stat">10K+ members</span>
+              <span class="stat">•</span>
+              <span class="stat">Active discussions</span>
+            </div>
+            <div class="featured-resources">
+              <div class="resource-item">
+                <span class="resource-title">Best Practices Forum</span>
+                <span class="resource-type">Community</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Expert Q&A Sessions</span>
+                <span class="resource-type">Live</span>
+              </div>
+              <div class="resource-item">
+                <span class="resource-title">Success Stories</span>
+                <span class="resource-type">Stories</span>
+              </div>
+            </div>
+            <button class="btn-ghost">Join Community</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="page-section muted">
-      <div class="container split">
-        <div>
-          <h2>Stay in the loop</h2>
-          <p>Subscribe to release notes and upcoming enablement sessions.</p>
-          <form class="inline" action="https://example.com" method="post">
-            <label>Email
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="muted small-print">We’ll send one digest per month and you can unsubscribe anytime.</p>
+    <!-- Featured Content Section -->
+    <section class="featured-content-section">
+      <div class="featured-container">
+        <div class="section-header">
+          <h2 class="section-title">Featured This Week</h2>
+          <p class="section-subtitle">Hand-picked resources from our experts</p>
         </div>
-        <div class="card">
-          <h3>Featured sessions</h3>
-          <ul class="stacked-list">
-            <li>
-              <strong>AI onboarding masterclass</strong>
-              <span>Best practices for launching pods with shared context.</span>
-            </li>
-            <li>
-              <strong>Payments deep dive</strong>
-              <span>How escrow and compliance workflows keep everyone protected.</span>
-            </li>
-            <li>
-              <strong>Guild showcase</strong>
-              <span>Live demos from top-performing freelancer pods.</span>
-            </li>
-          </ul>
+        
+        <div class="featured-grid">
+          <div class="featured-card large">
+            <div class="card-image">
+              <div class="image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="card-badge">Featured</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-type">Webinar</span>
+                <span class="card-duration">45 min</span>
+              </div>
+              <h3 class="card-title">The Future of AI-Powered Talent Management</h3>
+              <p class="card-description">
+                Join our CEO and industry experts as they discuss the latest trends in AI-powered 
+                talent management and what it means for the future of work.
+              </p>
+              <div class="card-author">
+                <div class="author-avatar">JD</div>
+                <div class="author-info">
+                  <span class="author-name">John Doe</span>
+                  <span class="author-title">CEO, NeuralGig</span>
+                </div>
+              </div>
+              <div class="card-stats">
+                <span class="stat">2.5K views</span>
+                <span class="stat">•</span>
+                <span class="stat">4.9/5 rating</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-primary">Watch Now</button>
+              <button class="btn-ghost">Add to Calendar</button>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="card-image">
+              <div class="image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-type">Guide</span>
+                <span class="card-duration">10 min read</span>
+              </div>
+              <h3 class="card-title">5 Steps to Optimize Your AI Matching</h3>
+              <p class="card-description">Learn how to fine-tune your AI matching algorithms for better results.</p>
+              <div class="card-stats">
+                <span class="stat">1.2K downloads</span>
+                <span class="stat">•</span>
+                <span class="stat">4.8/5 rating</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-primary small">Download</button>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="card-image">
+              <div class="image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-type">Template</span>
+                <span class="card-duration">5 min setup</span>
+              </div>
+              <h3 class="card-title">Project Success Metrics Template</h3>
+              <p class="card-description">Track and measure project success with this comprehensive template.</p>
+              <div class="card-stats">
+                <span class="stat">800 downloads</span>
+                <span class="stat">•</span>
+                <span class="stat">4.9/5 rating</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-primary small">Download</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> NeuralGig Labs. Crafted for AI-native talent networks.</p>
-        <div class="footer-links">
-          <a href="../README.md" target="_blank" rel="noopener">Developer docs</a>
-          <a href="../docs/PRD.md" target="_blank" rel="noopener">Product brief</a>
-          <a href="index.html#workspace">Prototype console</a>
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2>Stay Updated</h2>
+            <p>Get the latest resources, insights, and updates delivered to your inbox weekly.</p>
+            <div class="newsletter-benefits">
+              <div class="benefit-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Weekly resource roundup</span>
+              </div>
+              <div class="benefit-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Exclusive early access</span>
+              </div>
+              <div class="benefit-item">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Expert insights & tips</span>
+              </div>
+            </div>
+          </div>
+          <div class="newsletter-form">
+            <form class="subscription-form">
+              <div class="form-group">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">
+                  <span>Subscribe</span>
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="form-disclaimer">No spam, unsubscribe at any time.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2>Ready to access all resources?</h2>
+          <p>Join NeuralGig and get unlimited access to our complete resource library.</p>
+          <div class="cta-actions">
+            <button class="btn-primary large">
+              <span>Get Started Free</span>
+              <div class="btn-shine"></div>
+            </button>
+            <button class="btn-ghost large">
+              <span>Browse Resources</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="neural-icon">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+              </div>
+              <span>Neural<span class="gradient-text">Gig</span></span>
+            </div>
+            <p class="footer-tagline">Crafted for AI-native talent networks</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Platform</h4>
+              <a href="platform.html">Features</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="resources.html">Resources</a>
+            </div>
+            <div class="footer-section">
+              <h4>Community</h4>
+              <a href="clients.html">For Clients</a>
+              <a href="talent.html">For Talent</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+              <h4>Developers</h4>
+              <a href="../README.md" target="_blank" rel="noopener">Documentation</a>
+              <a href="../docs/PRD.md" target="_blank" rel="noopener">Product Brief</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> NeuralGig Labs. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <template id="alert-template">
-      <div class="alert">
-        <span class="message"></span>
-        <button type="button" class="close" aria-label="Close">&times;</button>
-      </div>
-    </template>
-
-    <div id="alerts" aria-live="polite"></div>
-
+    <!-- Scripts -->
     <script type="module" src="app.js"></script>
+    <script>
+      function scrollToResources() {
+        document.getElementById('resources').scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function openNewsletter() {
+        document.querySelector('.newsletter-section').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Tab functionality for resource preview
+      document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.preview-tabs .tab');
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.subscription-form');
+        if (newsletterForm) {
+          newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+              // Simulate subscription
+              alert('Thank you for subscribing! You\'ll receive our weekly updates.');
+              this.reset();
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.DS_Store
+venv/
+.venv/
+*.egg-info/
+node_modules/
+.next/
+web/.env.local
+web/.next/
+web/node_modules/
+web/.turbo/
